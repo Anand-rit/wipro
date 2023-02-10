@@ -1,1 +1,45 @@
+## even:
 
+public class IsEven {
+    public int isEven(int input1){
+        if (input1 % 2 == 0) return 2;
+        else return 1;
+    }
+}
+
+## odd:
+
+public class IsOdd {
+    public int isOdd(int input1){
+        if (input1 % 2 == 0) return 1;
+        else return 2;
+    }
+}
+
+## last digit:
+
+public class LastDigitOfN{
+    public int lastDigitOfN(int input1){
+        return Math.abs(input1 % 10);
+    }
+}
+
+## second last digit:
+
+public class SecondLastDigitOfN{
+    public int secondLastDigitOfN(int input1){
+        if (input1 > 9 || input1 < -9){
+            input1 /= 10;
+            return Math.abs(input1 % 10);
+        }
+        else return -1;
+    }
+}
+
+## add last digits:
+
+public class AddLastDigits{
+    public int addLastDigits(int input1, int input2){
+        return Math.abs(input1 % 10) + Math.abs(input2 % 10);
+    }
+}

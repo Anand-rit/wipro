@@ -1,1 +1,113 @@
+##NFactorial
 
+public class NFactorial {
+    private static int nFactorial(int input1) {
+        if (input1 < 2) return 1;
+        return input1 * nFactorial(input1 - 1);
+    }
+}
+##Multiple
+
+public class IsMultiple{
+    public int isMultiple(int input1, int input2){
+        if (input1 == 0 || input2 == 0) return 3;
+        else if (input1 % input2 == 0) return 2;
+        else return 1;
+    }
+}
+##ISPrime
+
+public class IsPrime {
+    public int isPrime(int input1) {
+        if (1 == input1)
+            return 1;
+
+        for (int i = 2; i <= Math.sqrt(input1); i++)
+            if (input1 % i == 0)
+                return 1;
+
+        return 2;
+    }
+}
+##NthFibonacci
+
+public class NthFibonacci {
+    public long nthFibonacci (int input1) {
+        long first = 0, second = 1, sum;
+
+        for (int i = 1; i < input1; i++) {
+            sum = first + second;
+            first = second;
+            second = sum;
+        }
+
+        return first;
+    }
+}
+
+##NthPrime
+
+public class NthPrime {
+    public static int nthPrime(int input1) {
+        int num = 1, count = 0, i;
+        while(count < input1){
+            num++;
+            for (i = 2; i <= num; i++)
+                if (num % i == 0) break;
+            if (i == num) count++;
+        }
+        return num;
+    }
+}
+
+##CountEvenOdds
+
+public class CountEvensOdds{
+    public int countEvensOdds(int input1, int input2, int input3, int input4, int input5, String input6){
+        int count = 0;
+        int [] arr = {input1, input2, input3, input4, input5};
+        for (int num : arr){
+            if (num % 2 == 0) count++;
+        }
+
+        if (input6.equals("even")) return count;
+        else return 5- count;
+    }
+}
+
+##CountEvens
+
+public class CountEvens{
+    public int countEvens(int input1, int input2, int input3, int  input4, int input5){
+        int [] arr = {input1, input2, input3, input4, input5};
+        int count = 0;
+        for (int num : arr){
+            if (num % 2 == 0) count++;
+        }
+        return count;
+    }
+}
+
+public class CountEvens{
+    public int countEvens(int input1, int input2, int input3, int  input4, int input5){
+        int [] arr = {input1, input2, input3, input4, input5};
+        int count = 0;
+        for (int num : arr){
+            if (num % 2 == 0) count++;
+        }
+        return count;
+    }
+}
+
+##CountOdds
+
+public class CountOdds{
+    public int countOdds(int input1, int input2, int input3, int  input4, int input5){
+        int [] arr = {input1, input2, input3, input4, input5};
+        int count = 0;
+        for (int num : arr){
+            if (num % 2 != 0) count++;
+        }
+        return count;
+    }
+}
